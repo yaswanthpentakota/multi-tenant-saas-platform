@@ -31,12 +31,12 @@
         ],
         "projects": [
           {
-            "name": "Project Alpha",
-            "description": "First demo project"
+            "name": "Website Redesign",
+            "description": "Complete redesign of company website"
           },
           {
-            "name": "Project Beta",
-            "description": "Second demo project"
+            "name": "Mobile App",
+            "description": "Develop mobile app for iOS and Android"
           }
         ]
       }
