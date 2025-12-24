@@ -1,4 +1,4 @@
-const { Pool } = require('pg');
+﻿const { Pool } = require('pg');
 const fs = require('fs');
 const path = require('path');
 
@@ -12,18 +12,15 @@ const pool = new Pool({
 
 // Run migrations automatically on startup
 async function runMigrations() {
-  const migrationsPath = path.join(__dirname, '../../migrations');
-  
+  const migrationsPath = path.join('/app', 'database', 'migrations');
   try {
     // Run SQL migration files in order
     const files = fs.readdirSync(migrationsPath).filter(f => f.endsWith('.sql')).sort();
-    
     for (const file of files) {
       const sql = fs.readFileSync(path.join(migrationsPath, file), 'utf8');
-      console.log(`Running migration: ${file}`);
+      console.log(\Running migration: \\);
       await pool.query(sql);
     }
-    
     console.log('All migrations completed successfully');
   } catch (error) {
     console.error('Migration error:', error);

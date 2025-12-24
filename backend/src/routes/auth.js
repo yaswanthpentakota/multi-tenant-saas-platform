@@ -1,5 +1,5 @@
-const express = require('express');
-const bcrypt = require('bcrypt');
+﻿const express = require('express');
+const bcrypt = require('bcryptjs');
 const { pool } = require('../db/database');
 const { generateToken, authMiddleware } = require('../middleware/auth');
 const { logAudit } = require('../utils/auditLogger');
@@ -156,3 +156,4 @@ router.post('/logout', authMiddleware, async (req, res) => {
 });
 
 module.exports = router;
+
